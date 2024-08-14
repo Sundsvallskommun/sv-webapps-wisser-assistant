@@ -1,0 +1,16 @@
+{
+  "settings": "Settings",
+  "user": "User",
+  "assistant_id": "Assistant ID",
+  "app": "Application",
+  "server_url": "Url to AI server",
+  "assistant_info": "Assistant information",
+  "description": "Description",
+  "assistant_shortName": "Short name (used if avatar is missing)",
+  "stream_answers": "Stream answers",
+  "use_shadow_dom": "Use shadow dom",
+  "use_user": "Include username",
+
+  "name": "Name",
+  "avatar": "Avatar"
+}

@@ -1,0 +1,33 @@
+@import "../preflight.css";
+@import "../coreBase.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.sk-ai-module {
+  @apply z-[1000];
+  @apply transition-none;
+  @apply relative w-full h-screen grow;
+  top: unset;
+  left: unset;
+  right: unset;
+  bottom: unset;
+
+  /* &[data-fullscreen="false"] {
+    @apply right-assistantright;
+    @apply bottom-assistantbottom;
+  }
+  &[data-fullscreen="true"] {
+    @apply top-assistanttop;
+    @apply right-assistantright;
+    @apply left-assistantleft;
+    @apply bottom-assistantbottom;
+    width: calc(
+      100% - var(--sk-spacing-assistantleft) - var(--sk-spacing-assistantright)
+    ) !important;
+  } */
+}
+
+.sk-ai-markdown {
+  word-break: break-word;
+}

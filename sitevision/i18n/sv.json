@@ -1,0 +1,16 @@
+{
+  "settings": "Inställningar",
+  "user": "Användare",
+  "assistant_id": "Assistentens ID",
+  "app": "Applikation",
+  "server_url": "Url till AI-server",
+  "assistant_info": "Assistent-information",
+  "description": "Beskrivning",
+  "assistant_shortName": "Kort namn (används om avatar saknas)",
+  "stream_answers": "Strömma svar",
+  "use_shadow_dom": "Kör i shadow dom",
+  "use_user": "Skicka med användarnamn",
+
+  "name": "Namn",
+  "avatar": "Avatar"
+}

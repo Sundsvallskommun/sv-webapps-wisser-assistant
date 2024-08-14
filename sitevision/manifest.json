@@ -1,0 +1,18 @@
+{
+  "id": "web-app-wisser-assistant",
+  "version": "0.0.1",
+  "name": {
+    "en": "Wisser assistant"
+  },
+  "author": "Devize",
+  "description": {
+    "en": "AI Assistant for Sundsvalls kommuns Wisser site"
+  },
+  "helpUrl": "https://example.com/webapps",
+  "type": "WebApp",
+  "bundled": true,
+  "maxUploadSizeInMB": 0,
+  "requiredLibs": {
+    "react": "17.0.2"
+  }
+}

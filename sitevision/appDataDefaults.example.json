@@ -1,0 +1,14 @@
+{
+  "appData": {
+    "use_user": true,
+    "assistantId": "",
+    "stream": true,
+    "shadowdom": true,
+    "server_url": "",
+    "app": "WISSER",
+    "assistant_name": "",
+    "assistant_shortName": "AI",
+    "assistant_description": "",
+    "salt": ""
+  }
+}

@@ -1,0 +1,66 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title"><%= i18n('settings') %></h3>
+  </div>
+
+  <div class="panel-body">
+    <div class="form-group">
+      <label><%= i18n('server_url') %></label>
+      <input class="form-control" name="server_url" />
+    </div>
+    <div class="form-group">
+      <label><%= i18n('assistant_id') %></label>
+      <input class="form-control" name="assistantId" />
+    </div>
+    <div class="form-group">
+      <label><%= i18n('app') %></label>
+      <input class="form-control" name="app" />
+    </div>
+    <div class="form-group">
+      <label
+        ><input type="checkbox" name="stream" data-value-type="boolean" /> <%=
+        i18n('stream_answers') %></label
+      >
+    </div>
+    <div class="form-group">
+      <label
+        ><input type="checkbox" name="shadowdom" data-value-type="boolean" />
+        <%= i18n('use_shadow_dom') %></label
+      >
+    </div>
+    <div class="form-group">
+      <label
+        ><input type="checkbox" name="use_user" data-value-type="boolean" /> <%=
+        i18n('use_user') %></label
+      >
+    </div>
+  </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title"><%= i18n('assistant_info') %></h3>
+  </div>
+
+  <div class="panel-body">
+    <div class="form-group">
+      <label><%= i18n('name') %></label>
+      <input class="form-control" name="assistant_name" />
+    </div>
+    <div class="form-group">
+      <label><%= i18n('assistant_shortName') %></label>
+      <input class="form-control" name="assistant_shortName" maxlength="2" />
+    </div>
+    <div class="form-group">
+      <label><%= i18n('description') %></label>
+      <textarea class="form-control" name="assistant_description"> </textarea>
+    </div>
+    <div class="form-group">
+      <label><%= i18n('avatar') %></label>
+      <input
+        class="form-control"
+        data-component="image-selector"
+        name="assistant_avatar"
+      />
+    </div>
+  </div>
+</div>

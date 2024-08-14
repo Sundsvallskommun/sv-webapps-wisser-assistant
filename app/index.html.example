@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sundsvalls kommun wisserassistant-assistent</title>
+    <style>
+      html {
+        background-color: white;
+      }
+
+      body {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+      }
+      .menu {
+        position: relative;
+        display: inline-block;
+        flex-grow: 0;
+      }
+      .maincontainer {
+        display: inline-block;
+        position: fixed;
+        height: 100vh;
+        width: calc(100% - 320px);
+        right: 0;
+        top: 0;
+        flex-grow: 1;
+      }
+    </style>
+  </head>
+
+  <body class="test">
+    <img src="assets/menu.png" class="menu" />
+
+    <div class="maincontainer">
+      <script type="module" src="/src/main.tsx"></script>
+
+      <div
+        id="wisser-assistant"
+        data-user=""
+        data-hash="fFWL9dva+NHFO29BYgJO9lF9iBwp0XhrWcaw0O7WT3U="
+        data-assistant="1fbad594-1a8c-4bb3-b2ad-2939573e3827"
+        data-left="320px"
+        data-shadow="false"
+      ></div>
+    </div>
+  </body>
+</html>
