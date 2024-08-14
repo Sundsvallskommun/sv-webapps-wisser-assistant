@@ -5,23 +5,17 @@ import * as React from "react";
 export interface ClientAppProperties {
   assistant: AssistantInfo;
   settings: AssistantSettings;
-  currentUser?: any;
   shadowdom?: boolean;
 }
 
 export const ClientApp: React.FunctionComponent<ClientAppProperties> = ({
   assistant,
   settings,
-  currentUser,
   shadowdom = true,
 }) => {
   const [oldInfo, setInfo, oldSettings, setSettings] = useAssistantStore(
     (state) => [state.info, state.setInfo, state.settings, state.setSettings]
   );
-
-  React.useEffect(() => {
-    console.log("🚀 ~ React.useEffect ~ currentUser:", currentUser);
-  }, [currentUser]);
 
   React.useEffect(() => {
     if (window && document) {
