@@ -18,24 +18,19 @@ export const Assistant: React.FunctionComponent<AssistantProps> = ({
   );
 
   React.useEffect(() => {
-    // if (window && document) {
     require("../../../assets/assistant-wisser");
     setAssistantStoreName("sk-ai-assistant-wisser");
-    // }
   }, []);
 
   React.useEffect(() => {
-    // if (window && document) {
     const info: AssistantInfo = {
       ...oldInfo,
       ...assistant,
     };
     setInfo(info);
-    // }
   }, [assistant, setInfo, oldInfo]);
 
   React.useEffect(() => {
-    // if (window && document) {
     if (settings) {
       const newSettings: AssistantSettings = {
         ...oldSettings,
@@ -43,7 +38,6 @@ export const Assistant: React.FunctionComponent<AssistantProps> = ({
       };
       setSettings(newSettings);
     }
-    // }
   }, [settings, setSettings, oldSettings]);
 
   return (

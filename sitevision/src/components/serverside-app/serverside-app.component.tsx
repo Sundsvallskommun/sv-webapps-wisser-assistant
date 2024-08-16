@@ -10,13 +10,6 @@ export const ServerSideApp: React.FC<ServerSideAppProps> = ({ assistant }) => {
   return (
     <div>
       <AssistantDummie assistant={assistant} />
-      {/* <h4>{assistant.name}</h4>
-      <small>{assistant.title}</small>
-      <p>
-        {typeof assistant?.description === "string"
-          ? assistant?.description
-          : assistant.description?.default}
-      </p> */}
     </div>
   );
 };
