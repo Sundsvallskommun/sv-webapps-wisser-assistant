@@ -5,7 +5,9 @@ build
 dist
 appDataDefaults.json
 assets/*.js
+assets/*.css
 *.log
+yarn-error.log*
 
 #VSCode excludes
 .vscode/*

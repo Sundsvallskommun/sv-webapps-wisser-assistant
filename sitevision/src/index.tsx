@@ -9,6 +9,7 @@ import { ServerSideApp } from "./components/serverside-app/serverside-app.compon
 import { getHash } from "./utils/hash.service";
 import portletContextUtil from "@sitevision/api/server/PortletContextUtil";
 import properties from "@sitevision/api/server/Properties";
+import versionUtil from "@sitevision/api/server/VersionUtil";
 
 router.get("/", (req, res) => {
   const avatar = appData.getNode("assistant_avatar");
@@ -21,6 +22,9 @@ router.get("/", (req, res) => {
     shortName: appData.get("assistant_shortName") as string,
     avatar: avatar ? ReactHtmlParser(imageRenderer.render())[0] : undefined,
   };
+
+  const viewMode = versionUtil.getCurrentVersion();
+  const isEditing = viewMode === versionUtil.OFFLINE_VERSION;
 
   const shadowdom = appData.get("shadowdom") as boolean;
 
@@ -49,5 +53,6 @@ router.get("/", (req, res) => {
     assistant,
     settings,
     shadowdom,
+    isEditing,
   });
 });

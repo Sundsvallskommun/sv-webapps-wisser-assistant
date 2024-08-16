@@ -34,6 +34,9 @@
   "plugins": [
     "autoprefixer"
   ],
+  "exclude": [
+    "assets"
+  ],
   "devDependencies": {
     "@types/react-html-parser": "^2.0.6",
     "copy-file": "^11.0.0"
