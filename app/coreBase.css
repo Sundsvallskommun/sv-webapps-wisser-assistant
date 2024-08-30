@@ -1,4 +1,5 @@
 #wisserroot {
+  font-family: var(--env-font-family);
   @apply text-base antialiased {
   }
 

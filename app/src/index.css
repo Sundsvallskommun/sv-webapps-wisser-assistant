@@ -12,20 +12,10 @@
   left: unset;
   right: unset;
   bottom: unset;
+}
 
-  /* &[data-fullscreen="false"] {
-    @apply right-assistantright;
-    @apply bottom-assistantbottom;
-  }
-  &[data-fullscreen="true"] {
-    @apply top-assistanttop;
-    @apply right-assistantright;
-    @apply left-assistantleft;
-    @apply bottom-assistantbottom;
-    width: calc(
-      100% - var(--sk-spacing-assistantleft) - var(--sk-spacing-assistantright)
-    ) !important;
-  } */
+:host {
+  font-family: var(--env-font-family);
 }
 
 .sk-ai-markdown {

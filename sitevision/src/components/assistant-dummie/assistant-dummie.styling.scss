@@ -1,0 +1,143 @@
+.sk-ai-module {
+  width: 100%;
+  height: 100%;
+  :global {
+    .sk-avatar {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      font-weight: bold;
+      &.sk-avatar-sm {
+        height: 2rem;
+        width: 2rem;
+        min-height: 1.5rem;
+        min-width: 1.5rem;
+        max-height: 2rem;
+        max-width: 2rem;
+        font-size: 0.875rem;
+        line-height: 1rem;
+      }
+      &.sk-avatar-md {
+        height: 2.5rem;
+        width: 2.5rem;
+        min-height: 2rem;
+        min-width: 2rem;
+        max-height: 2.5rem;
+        max-width: 2.5rem;
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+      &.sk-avatar-lg {
+        height: 4rem;
+        width: 4rem;
+        min-height: 2.5rem;
+        min-width: 2.5rem;
+        max-height: 4rem;
+        max-width: 4rem;
+        font-size: 1.125rem;
+        line-height: 2rem;
+      }
+
+      &-img {
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+      }
+      &[data-hasimage="true"] {
+        background: transparent;
+      }
+    }
+
+    .sk-ai-module-content {
+      display: flex;
+      justify-content: center;
+      overflow-x: hidden;
+    }
+    .sk-ai-module-content-row {
+      width: 100%;
+      max-height: 100%;
+      max-width: 100%;
+      flex-shrink: 1;
+      flex-grow: 1;
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+    }
+    .sk-ai-module-feed {
+      width: 100%;
+      flex-grow: 1;
+      align-items: center;
+      gap: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: 1rem;
+      padding-bottom: 1.5rem;
+      max-height: 100%;
+      overflow-y: auto;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+    .sk-ai-assistant-presentation {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      height: 100%;
+      flex-grow: 1;
+
+      &-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        &-title {
+          text-align: center;
+          width: 100%;
+          font-weight: bold;
+        }
+        &-descriptions {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+        }
+        &-description {
+          text-align: center;
+          width: 100%;
+        }
+      }
+
+      &[data-size="lg"] {
+        min-height: 25.5rem;
+        margin: 1.5rem;
+        max-width: 27rem;
+
+        .sk-avatar {
+          width: 89px;
+          height: 89px;
+          max-width: 89px;
+          max-height: 89px;
+        }
+      }
+
+      .sk-ai-assistant-presentation-header {
+        gap: 0.375rem;
+        padding-bottom: 1.5rem;
+        &-title {
+          font-size: 1.625rem;
+          line-height: 2.125rem;
+        }
+        &-description {
+          font-size: 1.25rem;
+          line-height: 1.75rem;
+        }
+      }
+    }
+  }
+}

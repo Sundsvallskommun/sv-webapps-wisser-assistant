@@ -5,7 +5,7 @@ import {
   useAssistantStore,
   useSessions,
 } from "@sk-web-gui/ai";
-import { ColorSchemeMode, GuiProvider } from "@sk-web-gui/react";
+import { GuiProvider } from "@sk-web-gui/react";
 import { Suspense, useEffect, useState } from "react";
 import { Assistant } from "./components/Assistant";
 
@@ -62,10 +62,7 @@ function App({
   }, [user, hash, assistantId, setSettings, setInfo, newSession]);
 
   return (
-    <GuiProvider
-      colorScheme={ColorSchemeMode.Light}
-      htmlFontSize={fontBase ? parseFloat(fontBase) : 16}
-    >
+    <GuiProvider htmlFontSize={fontBase ? parseFloat(fontBase) : 16}>
       <Suspense fallback="loading">{loaded && <Assistant />}</Suspense>
     </GuiProvider>
   );

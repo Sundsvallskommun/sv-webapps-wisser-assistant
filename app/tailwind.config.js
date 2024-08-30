@@ -12,10 +12,11 @@ export default {
     "./node_modules/@sk-web-gui/*/dist/**/*.js",
   ],
   darkMode: "class", // or 'media' or 'class'
-  // important: "#wisserroot",
+  important: "#wisserroot",
   corePlugins: {
     preflight: false,
   },
+
   blocklist: [],
   theme: {
     extend: {
