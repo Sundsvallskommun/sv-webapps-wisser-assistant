@@ -1,10 +1,9 @@
-@import "../preflight.css";
 @import "../coreBase.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.sk-ai-module {
+.sk-ai-corner-module {
   @apply z-[1000];
   @apply transition-none;
   @apply relative w-full h-screen grow;
@@ -12,6 +11,8 @@
   left: unset;
   right: unset;
   bottom: unset;
+  @apply max-h-screen;
+  @apply text-left;
 }
 
 :host {
