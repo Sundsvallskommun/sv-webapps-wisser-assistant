@@ -11,13 +11,13 @@ export const AssistantDummie: React.FC<AssistantDummieProps> = ({
 }) => {
   return (
     <div
-      className={styles["sk-ai-module"]}
+      className={styles["sk-ai-corner-module"]}
       data-fullscren={true}
       data-docked={false}
     >
-      <div className="sk-ai-module-content">
-        <div className="sk-ai-module-content-row">
-          <div className="sk-ai-module-feed">
+      <div className="sk-ai-corner-module-content">
+        <div className="sk-ai-corner-module-content-row">
+          <div className="sk-ai-corner-module-feed">
             <AssistantPresentation assistant={assistant} size="lg" />
           </div>
         </div>

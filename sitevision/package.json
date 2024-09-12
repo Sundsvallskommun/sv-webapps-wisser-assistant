@@ -1,6 +1,6 @@
 {
   "name": "web-app-wisser-assistant",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "type": "module",
   "dependencies": {
     "@sitevision/api": "^2024.4.2",

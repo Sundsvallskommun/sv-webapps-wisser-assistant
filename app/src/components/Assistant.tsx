@@ -61,23 +61,23 @@ export const Assistant: React.FC = () => {
   return (
     <>
       <div
-        className="sk-ai-module"
+        className="sk-ai-corner-module"
         data-fullscreen={true}
         data-docked={false}
         data-mobile={isMaxLargeDevice}
       >
-        <div className="sk-ai-module-content justify-center overflow-x-hidden">
-          <div className="sk-ai-module-content-row sk-ai-module-content-main w-full">
+        <div className="sk-ai-corner-module-content justify-center overflow-x-hidden">
+          <div className="sk-ai-corner-module-content-row sk-ai-corner-module-content-main w-full">
             <div
-              className="sk-ai-module-header justify-center"
+              className="sk-ai-corner-module-header justify-center"
               data-docked={false}
               data-fullscreen={true}
               data-mobile={isMaxLargeDevice}
             >
               {session?.name && (
-                <div className="sk-ai-module-header-title">
+                <div className="sk-ai-corner-module-header-title">
                   <Icon name="message-circle" />
-                  <span className="sk-ai-module-header-heading-name">
+                  <span className="sk-ai-corner-module-header-heading-name">
                     {session.name}
                   </span>
                 </div>
@@ -85,7 +85,7 @@ export const Assistant: React.FC = () => {
             </div>
 
             <>
-              <div className="sk-ai-module-feed" ref={scrollRef}>
+              <div className="sk-ai-corner-module-feed" ref={scrollRef}>
                 {!history || history.length < 1 ? (
                   <AssistantPresentation
                     size={isMaxLargeDevice ? "sm" : "lg"}
