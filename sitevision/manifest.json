@@ -1,14 +1,16 @@
 {
   "id": "sv-webapps-wisser-assistant",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "name": {
+    "sv": "Wisser-assistent",
     "en": "Wisser assistant"
   },
-  "author": "Devize",
+  "author": "Sundsvalls kommun",
   "description": {
+    "sv": "AI-assistent för Sundsvalls kommuns Wisser-sida",
     "en": "AI Assistant for Sundsvalls kommuns Wisser site"
   },
-  "helpUrl": "https://example.com/webapps",
+  "helpUrl": "https://github.com/Sundsvallskommun/sv-webapps-releases/tree/main/sv-webapps-wisser-assistant",
   "type": "WebApp",
   "bundled": true,
   "maxUploadSizeInMB": 0,

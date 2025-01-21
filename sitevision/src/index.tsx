@@ -39,20 +39,20 @@ router.get("/", (req, res) => {
   const app = appData.get("app") as string;
   const stream = appData.get("stream") as boolean;
   const hash = getHash(user, assistantId, app, salt);
-
+  const apiBaseUrl = appData.get("server_url") as string;
   const settings: AssistantSettings = {
-    apiBaseUrl: appData.get("server_url") as string,
     user,
     assistantId,
     app,
-    stream,
     hash,
   };
 
   res.agnosticRender(renderToString(<ServerSideApp assistant={assistant} />), {
+    apiBaseUrl,
     assistant,
     settings,
     shadowdom,
     isEditing,
+    stream,
   });
 });
