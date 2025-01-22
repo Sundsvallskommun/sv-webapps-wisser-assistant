@@ -20,10 +20,14 @@ function App({
   assistantId?: string | null;
   fontBase?: string;
 }) {
-  const [setSettings, setInfo] = useAssistantStore((state) => [
-    state.setSettings,
-    state.setInfo,
-  ]);
+  const [setSettings, setInfo, setStream, setApiBaseUrl] = useAssistantStore(
+    (state) => [
+      state.setSettings,
+      state.setInfo,
+      state.setStream,
+      state.setApiBaseUrl,
+    ]
+  );
   const newSession = useSessions((state) => state.newSession);
 
   const [loaded, setLoaded] = useState<boolean>(false);
@@ -35,9 +39,9 @@ function App({
       const settings: AssistantSettings = {
         user: user || "",
         assistantId: assistantId || "",
-        stream: import.meta.env.VITE_STREAM_DEFAULT,
+
         hash: hash || "",
-        apiBaseUrl: import.meta.env.VITE_API_BASE_URL,
+
         app: import.meta.env.VITE_APPLICATION,
       };
 
@@ -52,14 +56,24 @@ function App({
         },
         avatar: `${import.meta.env.VITE_BASE_PATH}assets/assistanticon.png`,
       };
-
+      setStream(import.meta.env.VITE_STREAM_DEFAULT === "true");
+      setApiBaseUrl(import.meta.env.VITE_API_BASE_URL);
       setSettings(settings);
       setInfo(info);
     }
 
     newSession();
     setLoaded(true);
-  }, [user, hash, assistantId, setSettings, setInfo, newSession]);
+  }, [
+    user,
+    hash,
+    assistantId,
+    setSettings,
+    setInfo,
+    newSession,
+    setStream,
+    setApiBaseUrl,
+  ]);
 
   return (
     <GuiProvider htmlFontSize={fontBase ? parseFloat(fontBase) : 16}>

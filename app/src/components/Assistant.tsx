@@ -8,6 +8,7 @@ import {
 import { Avatar, Button, Icon, useSnackbar } from "@sk-web-gui/react";
 import { useThemeQueries } from "@sk-web-gui/theme";
 import { useEffect, useRef, useState } from "react";
+import { MessageCircle, RefreshCcw } from "lucide-react";
 
 export const Assistant: React.FC = () => {
   const { isMaxLargeDevice } = useThemeQueries();
@@ -61,7 +62,7 @@ export const Assistant: React.FC = () => {
   return (
     <>
       <div
-        className="sk-ai-corner-module"
+        className="sk-ai-corner-module shadow-none"
         data-fullscreen={true}
         data-docked={false}
         data-mobile={isMaxLargeDevice}
@@ -76,7 +77,7 @@ export const Assistant: React.FC = () => {
             >
               {session?.name && (
                 <div className="sk-ai-corner-module-header-title">
-                  <Icon name="message-circle" />
+                  <Icon icon={<MessageCircle />} />
                   <span className="sk-ai-corner-module-header-heading-name">
                     {session.name}
                   </span>
@@ -119,7 +120,7 @@ export const Assistant: React.FC = () => {
                     className="grow-0"
                     variant="tertiary"
                     size="sm"
-                    leftIcon={<Icon name="refresh-ccw" />}
+                    leftIcon={<Icon icon={<RefreshCcw />} />}
                     onClick={() => newSession()}
                     aria-describedby="sk-new-session-info"
                   >

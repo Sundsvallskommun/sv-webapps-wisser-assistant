@@ -26,3 +26,5 @@ tsconfig.tsbuildinfo
 
 index.html
 *.zip
+
+.env
