@@ -1,5 +1,9 @@
 #wisserroot {
   font-family: var(--env-font-family);
+  * {
+    box-sizing: border-box;
+  }
+
   @apply text-base antialiased {
   }
 
@@ -25,6 +29,10 @@
 
     @apply focus-visible:outline-0 {
     }
+  }
+
+  .sk-form-input-textarea-group-inner {
+    @apply border-1 border-solid;
   }
 
   small {
@@ -79,6 +87,12 @@
     p {
       @apply mt-sm text-base {
       }
+    }
+  }
+  .sk-ai-corner-module[data-fullscreen="true"]
+    .sk-ai-corner-module-feed
+    .sk-ai-feed {
+    @apply max-w-[80rem] {
     }
   }
 }
