@@ -1,8 +1,8 @@
 import * as React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import type { ClientAppProps } from "./components/client-app/client-app.component";
 import { ClientApp } from "./components/client-app/client-app.component";
 
 export default (initialState: ClientAppProps, el: HTMLElement) => {
-  ReactDOM.render(<ClientApp {...initialState} />, el);
+  createRoot(el).render(<ClientApp {...initialState} />);
 };
