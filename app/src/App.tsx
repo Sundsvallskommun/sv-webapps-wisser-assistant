@@ -20,20 +20,26 @@ function App({
   assistantId?: string | null;
   fontBase?: string;
 }) {
-  const [setSettings, setInfo, setStream, setApiBaseUrl] = useAssistantStore(
-    (state) => [
-      state.setSettings,
-      state.setInfo,
-      state.setStream,
-      state.setApiBaseUrl,
-    ]
-  );
+  const [
+    setSettings,
+    setInfo,
+    setStream,
+    setApiBaseUrl,
+    setConversationVersion,
+  ] = useAssistantStore((state) => [
+    state.setSettings,
+    state.setInfo,
+    state.setStream,
+    state.setApiBaseUrl,
+    state.setConversationVersion,
+  ]);
   const newSession = useSessions((state) => state.newSession);
 
   const [loaded, setLoaded] = useState<boolean>(false);
 
   useEffect(() => {
     setAssistantStoreName("sk-ai-assistant-wisser");
+    setConversationVersion(2);
 
     if (import.meta.env.DEV) {
       const settings: AssistantSettings = {
