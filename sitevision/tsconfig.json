@@ -8,6 +8,8 @@
     "strict": true,
     "skipLibCheck": true,
     "moduleResolution": "node",
+    "rootDir": "./src",
+    "ignoreDeprecations": "6.0",
     "outDir": "build"
   }
 }
